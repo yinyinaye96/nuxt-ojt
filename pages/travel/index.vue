@@ -30,6 +30,9 @@
   </div>
 </template>
 <script setup>
+definePageMeta({
+  middleware: "auth",
+});
 const { pending, data: travels } = useLazyFetch("/api/travels");
 console.log(travels);
 </script>

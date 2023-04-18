@@ -12,6 +12,9 @@
   </div>
 </template>
 <script setup>
+definePageMeta({
+  middleware: "auth",
+});
   const route = useRoute();
 </script>
 <style scoped>

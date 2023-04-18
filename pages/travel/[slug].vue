@@ -14,6 +14,9 @@
   </div>
 </template>
 <script setup>
+definePageMeta({
+  middleware: "auth",
+});
 const route = useRoute();
 const { data: travel } = await useFetch(`/api/travels/${route.params.slug}`);
 console.log(travel);

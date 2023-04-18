@@ -23,6 +23,9 @@
   </div>
 </template>
 <script setup>
+definePageMeta({
+  middleware: "auth",
+});
 const blogs = reactive([
   { id: 1, text: "Blog1" },
   { id: 2, text: "Blog2" },

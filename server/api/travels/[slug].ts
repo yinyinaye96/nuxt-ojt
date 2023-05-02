@@ -20,6 +20,6 @@ const travels = [
 ]
 
 export default defineEventHandler((event) => {
-    const { slug } = event.context.params;
+    const { slug } = getRouterParams(event);
     return travels.find(travel => travel.slug.toLowerCase() === slug.toLowerCase());
 });

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="max-w-screen-sm mx-auto p-4 mt-5 rounded shadow-md shadow-gray-400"
+    class="max-w-screen-sm mx-auto p-4 mt-5 rounded shadow-md shadow-gray-400 translate-y-full"
   >
     <h2 class="text-center text-2xl font-bold">Login Page</h2>
     <form>
@@ -26,7 +26,7 @@ const user = ref({
   pwd: null,
 });
 const userinfo = useCookie("user");
-if (userinfo.value.email) {
+if (userinfo.value != undefined && userinfo.value.email) {
   navigateTo("/");
 }
 const submit = () => {

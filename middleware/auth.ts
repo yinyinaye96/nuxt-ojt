@@ -1,7 +1,6 @@
 export default defineNuxtRouteMiddleware((to, from) => {
   const user = useCookie("user");
-  const { email } = user.value;
-  if (!email) {
+  if (user.value == undefined || !user.value.email) {
     return navigateTo('/login');
   }
 })
